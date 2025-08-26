@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOP UP STORE FOR BATTLEGROUND</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>TOP UP STORE FOR BATTLEGROUND</h1>
+    <p>Instant UC Top-Up via UPI Payment</p>
+  </header>
+
+  <section class="packages">
+    <h2>Select UC Package</h2>
+    <div class="package">5000 UC - ₹1000 <button onclick="selectPackage('5000 UC', 1000)">Buy</button></div>
+    <div class="package">15000 UC - ₹2000 <button onclick="selectPackage('15000 UC', 2000)">Buy</button></div>
+    <div class="package">25000 UC - ₹2500 <button onclick="selectPackage('25000 UC', 2500)">Buy</button></div>
+    <div class="package">50000 UC - ₹4500 <button onclick="selectPackage('50000 UC', 4500)">Buy</button></div>
+    <div class="package">100000 UC - ₹5000 <button onclick="selectPackage('100000 UC', 5000)">Buy</button></div>
+  </section>
+
+  <section id="payment" class="hidden">
+    <h2>Payment Instructions</h2>
+    <p>Send the amount to the following UPI ID:</p>
+    <div class="upi-box">
+      <span id="upi-id">shariff.12@superyes</span>
+      <button onclick="copyUPI()">Copy</button>
+    </div>
+    <div id="qr-code">
+      <img src="qr.png" alt="UPI QR Code">
+    </div>
+    <div class="invoice-section">
+      <h3>Generate Invoice</h3>
+      <label>Enter Player ID:</label>
+      <input type="text" id="playerId" placeholder="Player ID">
+      <button onclick="generateInvoice()">Download Invoice</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TOP UP STORE FOR BATTLEGROUND. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>
